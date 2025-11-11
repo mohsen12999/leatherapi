@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\Leather;
 use App\Models\User;
-use App\Models\leather;
 use Illuminate\Auth\Access\Response;
 
 class LeatherPolicy
@@ -19,7 +19,7 @@ class LeatherPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, leather $leather): bool
+    public function view(User $user, Leather $leather): bool
     {
         return false;
     }
@@ -35,7 +35,7 @@ class LeatherPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, leather $leather): bool
+    public function update(User $user, Leather $leather): bool
     {
         return false;
     }
@@ -43,7 +43,7 @@ class LeatherPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, leather $leather): bool
+    public function delete(User $user, Leather $leather): bool
     {
         return false;
     }
@@ -51,7 +51,7 @@ class LeatherPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, leather $leather): bool
+    public function restore(User $user, Leather $leather): bool
     {
         return false;
     }
@@ -59,7 +59,7 @@ class LeatherPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, leather $leather): bool
+    public function forceDelete(User $user, Leather $leather): bool
     {
         return false;
     }

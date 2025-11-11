@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\butcher;
-use App\Http\Requests\StorebutcherRequest;
-use App\Http\Requests\UpdatebutcherRequest;
+use App\Models\Butcher;
+use App\Http\Requests\StoreButcherRequest;
+use App\Http\Requests\UpdateButcherRequest;
 
 class ButcherController extends Controller
 {
@@ -27,7 +27,7 @@ class ButcherController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorebutcherRequest $request)
+    public function store(StoreButcherRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ButcherController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(butcher $butcher)
+    public function show(Butcher $butcher)
     {
         //
     }
@@ -43,7 +43,7 @@ class ButcherController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(butcher $butcher)
+    public function edit(Butcher $butcher)
     {
         //
     }
@@ -51,7 +51,7 @@ class ButcherController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatebutcherRequest $request, butcher $butcher)
+    public function update(UpdateButcherRequest $request, Butcher $butcher)
     {
         //
     }
@@ -59,7 +59,7 @@ class ButcherController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(butcher $butcher)
+    public function destroy(Butcher $butcher)
     {
         //
     }
