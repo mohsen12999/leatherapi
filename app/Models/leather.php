@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class leather extends Model
+{
+    /** @use HasFactory<\Database\Factories\LeatherFactory> */
+    use HasFactory, softDeletes;
+
+    protected $fillable = [
+        'butcher_id', 'cow', 'sheep', 'goat', 'loading_date' // , 'loading'
+    ];
+
+    public function butcher()
+    {
+        return $this->belongsTo(Butcher::class);
+    }
+}
