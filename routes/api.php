@@ -10,5 +10,13 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::apiResource('butchers', ButcherController::class);
-Route::apiResource('leathers', LeatherController::class);
+
+// Route::middleware('local.only')->group(function () {
+
+    Route::apiResource('butchers', ButcherController::class);
+    Route::apiResource('leathers', LeatherController::class);
+
+//});
+
+
+// Route::middleware('local.only')->get('/local-test', [LocalApiController::class, 'index']);

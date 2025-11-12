@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+        $middleware->alias([
+            'local.only' => \App\Http\Middleware\LocalOnly::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
