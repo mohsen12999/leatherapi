@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Leather extends Model
 {
     /** @use HasFactory<\Database\Factories\LeatherFactory> */
-    use HasFactory, softDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'butcher_id', 'cow', 'sheep', 'goat', 'loading_date' // , 'loading'
